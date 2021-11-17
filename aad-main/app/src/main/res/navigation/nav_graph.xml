@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.core.notification.NotificationFragment"
+        android:label="fragment_notification"
+        tools:layout="@layout/fragment_notification">
+        <action
+            android:id="@+id/action_notificationFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="br.com.programadordeelite.gdc.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_notificationFragment"
+            app:destination="@id/notificationFragment" />
+        <action
+            android:id="@+id/main_fragment_id"
+            app:destination="@id/notificationFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/action_mainFragment_to_toastSnakeFragment"
+            app:destination="@id/toastSnakeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_selectImageFragment"
+            app:destination="@id/selectImageFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_materialComponentsFragment"
+            app:destination="@id/materialComponentsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_interactiveUiFragment"
+            app:destination="@id/interactiveUiFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_sendFragment"
+            app:destination="@id/sendFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_recyclerViewFragment"
+            app:destination="@id/recyclerViewFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_showTabsActivity"
+            app:destination="@id/showTabsActivity" />
+        <action
+            android:id="@+id/action_mainFragment_to_tabExperimentActivity"
+            app:destination="@id/tabHostFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_drawerFragment"
+            app:destination="@id/drawerFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_themeFragment"
+            app:destination="@id/themeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_batteryFragment"
+            app:destination="@id/batteryFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_wordFragment"
+            app:destination="@id/wordFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_sharedPrefFragment"
+            app:destination="@id/sharedPrefFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_pulseExplodeFragment"
+            app:destination="@id/pulseExplodeFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_recyclerViewPagingFragment"
+            app:destination="@id/recyclerViewPagingFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_accessibilityFragment"
+            app:destination="@id/accessibilityFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_title_destination"
+            app:destination="@id/title_destination" />
+        <action
+            android:id="@+id/action_mainFragment_to_customViewFragment"
+            app:destination="@id/customViewFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_appSettingsFragment"
+            app:destination="@id/appSettingsFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_calcFragment"
+            app:destination="@id/calcFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/toastSnakeFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.core.toast.ToastSnakeFragment"
+        android:label="fragment_toast_snake"
+        tools:layout="@layout/fragment_toast_snake">
+        <action
+            android:id="@+id/action_toastSnakeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/blurFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.core.workmanager.BlurFragment"
+        android:label="fragment_workmanager"
+        tools:layout="@layout/fragment_blur">
+        <action
+            android:id="@+id/action_blurFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/selectImageFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.core.workmanager.SelectImageFragment"
+        android:label="fragment_select_image"
+        tools:layout="@layout/fragment_select_image">
+        <action
+            android:id="@+id/action_selectImageFragment_to_blurFragment"
+            app:destination="@id/blurFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/materialComponentsFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.materialcomponents.MaterialComponentsFragment"
+        android:label="fragment_material_components"
+        tools:layout="@layout/fragment_material_components">
+        <action
+            android:id="@+id/action_materialComponentsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_materialComponentsFragment_to_productGridFragment"
+            app:destination="@id/productGridFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/productGridFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.materialcomponents.ProductGridFragment"
+        android:label="fragment_product_grid"
+        tools:layout="@layout/fragment_product_grid">
+        <action
+            android:id="@+id/action_productGridFragment_to_materialComponentsFragment"
+            app:destination="@id/materialComponentsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/interactiveUiFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.interactiveui.InteractiveUiFragment"
+        android:label="fragment_interactive_ui"
+        tools:layout="@layout/fragment_interactive_ui">
+        <action
+            android:id="@+id/action_interactiveUiFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sendFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.activityintents.SendFragment"
+        android:label="fragment_activity_intents"
+        tools:layout="@layout/fragment_send">
+        <action
+            android:id="@+id/action_sendFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/replyFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_sendFragment_to_replyFragment"
+            app:destination="@id/replyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/replyFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.activityintents.ReplyFragment"
+        android:label="fragment_reply"
+        tools:layout="@layout/fragment_reply">
+        <action
+            android:id="@+id/action_replyFragment_to_sendFragment"
+            app:destination="@id/sendFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/sendFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/recyclerViewFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.recyclerview.RecyclerViewFragment"
+        android:label="fragment_recycler_view"
+        tools:layout="@layout/fragment_recycler_view">
+        <action
+            android:id="@+id/action_recyclerViewFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <activity
+        android:id="@+id/showTabsActivity"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.usernavigation.oldschool.UserNavigationActivity"
+        android:label="activity_show_tabs"
+        tools:layout="@layout/activity_user_navigation" />
+    <fragment
+        android:id="@+id/tabHostFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.usernavigation.tab.TabHostFragment"
+        android:label="fragment_tab_host"
+        tools:layout="@layout/fragment_tab_host" />
+    <fragment
+        android:id="@+id/drawerFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.usernavigation.drawer.DrawerFragment"
+        android:label="DrawerFragment" >
+        <action
+            android:id="@+id/action_drawerFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.menu.OrderFragment"
+        android:label="fragment_order"
+        tools:layout="@layout/fragment_order" >
+        <action
+            android:id="@+id/action_orderFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.menu.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_orderFragment"
+            app:destination="@id/orderFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/themeFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.themes.ThemeFragment"
+        android:label="fragment_theme"
+        tools:layout="@layout/fragment_theme" >
+        <action
+            android:id="@+id/action_themeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/batteryFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.themes.BatteryFragment"
+        android:label="fragment_battery"
+        tools:layout="@layout/fragment_battery" >
+        <action
+            android:id="@+id/action_batteryFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/wordFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.datamanagement.roomwithview.WordFragment"
+        android:label="fragment_word"
+        tools:layout="@layout/fragment_word" >
+        <action
+            android:id="@+id/action_wordFragment_to_newWordFragment"
+            app:destination="@id/newWordFragment" />
+        <action
+            android:id="@+id/action_wordFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newWordFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.datamanagement.roomwithview.NewWordFragment"
+        android:label="fragment_new_word"
+        tools:layout="@layout/fragment_new_word" >
+        <action
+            android:id="@+id/action_newWordFragment_to_wordFragment"
+            app:destination="@id/wordFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/sharedPrefFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.datamanagement.sharedprefs.SharedPrefFragment"
+        android:label="fragment_shared_pref"
+        tools:layout="@layout/fragment_shared_pref" >
+        <action
+            android:id="@+id/action_sharedPrefFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pulseExplodeFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.animation.PulseExplodeFragment"
+        android:label="fragment_pulse_explode"
+        tools:layout="@layout/fragment_pulse_explode" >
+        <action
+            android:id="@+id/action_pulseExplodeFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_pulseExplodeFragment_to_pulseExplodeDestinationFragment"
+            app:destination="@id/pulseExplodeDestinationFragment" />
+        <action
+            android:id="@+id/pulseExplodeDestinationFragment_with_custom_animation"
+            app:destination="@id/pulseExplodeDestinationFragment"
+            app:enterAnim="@android:anim/fade_in"
+            app:exitAnim="@android:anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/pulseExplodeDestinationFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.animation.PulseExplodeDestinationFragment"
+        android:label="fragment_pulse_explode_destination"
+        tools:layout="@layout/fragment_pulse_explode_destination" >
+        <action
+            android:id="@+id/action_pulseExplodeDestinationFragment_to_pulseExplodeFragment"
+            app:destination="@id/pulseExplodeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recyclerViewPagingFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.recyclerview.paging.RecyclerViewPagingFragment"
+        android:label="RecyclerViewPagingFragment" >
+        <action
+            android:id="@+id/action_recyclerViewPagingFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/accessibilityFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.accessibility.AccessibilityFragment"
+        android:label="fragment_accessibility"
+        tools:layout="@layout/fragment_accessibility" >
+        <action
+            android:id="@+id/action_accessibilityFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.datamanagement.viewmodelfactory.TitleFragment"
+        android:label="fragment_title"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_title_to_game"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+        <action
+            android:id="@+id/action_title_destination_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.datamanagement.viewmodelfactory.GameFragment"
+        android:label="fragment_game"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_game_to_score"
+            app:destination="@id/scoreFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:launchSingleTop="true"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/title_destination" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.datamanagement.viewmodelfactory.ScoreFragment"
+        android:label="fragment_score"
+        tools:layout="@layout/fragment_score">
+        <action
+            android:id="@+id/action_restart"
+            app:destination="@+id/game_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/title_destination" />
+        <argument
+            android:name="score"
+            android:defaultValue="0"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/customViewFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.userinterface.customview.CustomViewFragment"
+        android:label="fragment_custom_view"
+        tools:layout="@layout/fragment_custom_view" >
+        <action
+            android:id="@+id/action_customViewFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/appSettingsFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.datamanagement.appsettings.AppSettingsFragment"
+        android:label="fragment_app_settings"
+        tools:layout="@layout/fragment_app_settings" >
+        <action
+            android:id="@+id/action_appSettingsFragment_to_settingsFragment"
+            app:destination="@id/settingsFragment" />
+        <action
+            android:id="@+id/action_appSettingsFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.datamanagement.appsettings.SettingsFragment"
+        android:label="SettingsFragment" >
+        <action
+            android:id="@+id/action_settingsFragment_to_appSettingsFragment"
+            app:destination="@id/appSettingsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/calcFragment"
+        android:name="br.com.programadordeelite.gdc.codelab.debugging.calc.CalcFragment"
+        android:label="fragment_calc"
+        tools:layout="@layout/fragment_calc" >
+        <action
+            android:id="@+id/action_calcFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+</navigation>
